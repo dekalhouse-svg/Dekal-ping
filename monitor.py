@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 SERVERS_FILE = ROOT / "servers.json"
 RESULTS_FILE = ROOT / "results.json"
-TIMEOUT_SECONDS = 20
+TIMEOUT_SECONDS = 60
 MAX_RESPONSE_BYTES = 2048
 
 def utc_now():
