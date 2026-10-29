@@ -1,0 +1,48 @@
+name: DEKAL PING monitor
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - "servers.json"
+      - "monitor.py"
+      - ".github/workflows/monitor.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dekal-ping-monitor
+  cancel-in-progress: true
+
+jobs:
+  check-sites:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Récupérer les fichiers
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Préparer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Vérifier les sites
+        run: python monitor.py
+
+      - name: Enregistrer les résultats
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results.json
+          if git diff --cached --quiet; then
+            echo "Aucun changement à enregistrer."
+          else
+            git commit -m "Mettre à jour les résultats DEKAL PING"
+            git push
+          fi
