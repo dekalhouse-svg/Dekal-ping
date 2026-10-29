@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="Surveillance périodique de sites web avec GitHub Actions.">
+  <title>DEKAL PING</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">P</span><div><strong>DEKAL PING</strong><small>Surveillance de sites web</small></div></div>
+    <span id="connection" class="pill">Chargement…</span>
+  </header>
+  <main>
+    <section class="intro">
+      <p class="eyebrow">SURVEILLANCE DISTANTE</p>
+      <h1>Vos sites, sous surveillance.</h1>
+      <p class="muted">Les vérifications sont exécutées par GitHub Actions, même lorsque votre téléphone est hors ligne.</p>
+      <button id="refreshBtn" class="primary">Actualiser les résultats</button>
+    </section>
+    <section class="summary">
+      <article class="stat"><span>Sites configurés</span><strong id="totalCount">—</strong></article>
+      <article class="stat"><span>En ligne</span><strong id="upCount">—</strong></article>
+      <article class="stat"><span>En erreur</span><strong id="downCount">—</strong></article>
+    </section>
+    <section class="panel">
+      <div class="section-heading"><div><h2>Mes sites</h2><p class="muted">Liste issue du dépôt GitHub.</p></div><span id="updatedAt" class="updated">Aucun résultat</span></div>
+      <div id="siteList" class="site-list"><div class="empty">Chargement des résultats…</div></div>
+    </section>
+    <section class="panel howto">
+      <h2>Ajouter ou modifier un site</h2>
+      <ol>
+        <li>Ouvrez votre dépôt GitHub <strong>DEKAL-PING</strong>.</li>
+        <li>Ouvrez le fichier <code>servers.json</code>, puis appuyez sur le crayon pour le modifier.</li>
+        <li>Ajoutez une entrée dans la liste <code>servers</code>, en respectant la syntaxe JSON, puis validez avec <strong>Commit changes</strong>.</li>
+        <li>GitHub Actions lancera une vérification après la modification, puis continuera selon le calendrier prévu.</li>
+      </ol>
+      <p class="note">Les URL et les résultats sont publics dans ce dépôt public. N'y placez aucun mot de passe, jeton ou URL contenant des informations secrètes.</p>
+      <a id="repoLink" class="secondary" href="#" target="_blank" rel="noopener">Ouvrir le dépôt GitHub</a>
+    </section>
+    <p class="footnote">Les tâches planifiées peuvent être retardées. Le statut reflète la dernière vérification enregistrée, pas nécessairement l'état à la seconde près.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

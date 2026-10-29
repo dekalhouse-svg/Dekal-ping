@@ -1,0 +1,16 @@
+{
+  "servers": [
+    {
+      "id": "web-store-api",
+      "name": "WEB STORE API",
+      "url": "https://web-store-back.onrender.com/api/",
+      "enabled": true
+    },
+    {
+      "id": "web-store-site",
+      "name": "WEB STORE",
+      "url": "https://web-store-74me.onrender.com",
+      "enabled": true
+    }
+  ]
+}
