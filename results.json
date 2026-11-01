@@ -1,24 +1,24 @@
 {
-  "checked_at": "2026-10-31T21:58:43+00:00",
+  "checked_at": "2026-11-01T00:49:59+00:00",
   "results": [
     {
       "id": "web-store-api",
       "name": "WEB STORE API",
       "url": "https://web-store-back.onrender.com/api/",
-      "checked_at": "2026-10-31T21:57:43+00:00",
+      "checked_at": "2026-11-01T00:48:59+00:00",
       "status": "down",
       "http_status": null,
-      "response_ms": 60085.7,
+      "response_ms": 60102.8,
       "error": "TimeoutError: The read operation timed out"
     },
     {
       "id": "web-store-site",
       "name": "WEB STORE",
       "url": "https://web-store-74me.onrender.com",
-      "checked_at": "2026-10-31T21:58:43+00:00",
+      "checked_at": "2026-11-01T00:49:59+00:00",
       "status": "up",
       "http_status": 200,
-      "response_ms": 231.2,
+      "response_ms": 206.7,
       "error": null
     }
   ]
