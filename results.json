@@ -1,24 +1,24 @@
 {
-  "checked_at": "2026-11-25T22:46:15+00:00",
+  "checked_at": "2026-11-26T04:29:45+00:00",
   "results": [
     {
       "id": "web-store-api",
       "name": "WEB STORE API",
       "url": "https://web-store-back.onrender.com/api/",
-      "checked_at": "2026-11-25T22:45:32+00:00",
+      "checked_at": "2026-11-26T04:29:45+00:00",
       "status": "up",
       "http_status": 200,
-      "response_ms": 42307.8,
+      "response_ms": 293.4,
       "error": null
     },
     {
       "id": "web-store-site",
       "name": "WEB STORE",
       "url": "https://web-store-74me.onrender.com",
-      "checked_at": "2026-11-25T22:46:14+00:00",
+      "checked_at": "2026-11-26T04:29:45+00:00",
       "status": "up",
       "http_status": 200,
-      "response_ms": 247.1,
+      "response_ms": 216.5,
       "error": null
     }
   ]
